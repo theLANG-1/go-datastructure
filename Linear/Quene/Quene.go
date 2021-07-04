@@ -12,4 +12,6 @@ type quene interface {
 	Len() int
 
 	String() string
+
+	IsEmpty() bool
 }

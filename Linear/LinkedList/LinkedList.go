@@ -17,11 +17,7 @@ type linkedList struct {
 
 func (l *linkedList) AddFirst(value interface{}) {
 	var (
-		tmpNode = &LinkedNode{
-			Value: value,
-			Next:  l.virtualHead.Next,
-			Prev:  l.virtualHead,
-		}
+		tmpNode = NewLinkedNode(value, l.virtualHead.Next, l.virtualHead)
 	)
 	if l.virtualHead.Next != nil {
 		l.virtualHead.Next.Prev = tmpNode
@@ -31,10 +27,7 @@ func (l *linkedList) AddFirst(value interface{}) {
 }
 
 func (l *linkedList) AddLast(value interface{}) {
-	l.last.Next = &LinkedNode{
-		Value: value,
-		Next:  nil,
-	}
+	l.last.Next = NewLinkedNodeByValue(value)
 	l.last.Next.Prev = l.last
 	l.last = l.last.Next
 	l.len++

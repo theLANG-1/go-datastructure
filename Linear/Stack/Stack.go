@@ -16,4 +16,6 @@ type stack interface {
 	Len() int
 
 	String() string
+
+	IsEmpty() bool
 }

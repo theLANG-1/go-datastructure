@@ -12,10 +12,7 @@ type linkedStack struct {
 }
 
 func (l *linkedStack) Push(value interface{}) {
-	l.virtualHead.Next = &LinkedList.LinkedNodeSimplified{
-		Value: value,
-		Next:  l.virtualHead.Next,
-	}
+	l.virtualHead.Next = LinkedList.NewLinkedNodeSimplified(value, l.virtualHead.Next)
 	l.len++
 }
 
@@ -40,6 +37,10 @@ func (l *linkedStack) Top(obj *interface{}) bool {
 
 func (l *linkedStack) Len() int {
 	return l.len
+}
+
+func (l *linkedStack) IsEmpty() bool {
+	return l.len == 0
 }
 
 func (l *linkedStack) String() string {

@@ -25,6 +25,10 @@ func (s *seqQuene) Len() int {
 	return len(s.element)
 }
 
+func (s *seqQuene) IsEmpty() bool {
+	return len(s.element) == 0
+}
+
 func (s *seqQuene) String() string {
 	var (
 		builder strings.Builder

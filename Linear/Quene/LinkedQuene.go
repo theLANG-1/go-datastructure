@@ -13,10 +13,7 @@ type linkedQuene struct {
 }
 
 func (l *linkedQuene) Enquene(value interface{}) {
-	l.last.Next = &LinkedList.LinkedNodeSimplified{
-		Value: value,
-		Next:  nil,
-	}
+	l.last.Next = LinkedList.NewLinkedNodeSimplifiedByValue(value)
 	l.last = l.last.Next
 	l.len++
 }
@@ -52,6 +49,10 @@ func (l *linkedQuene) Last(obj *interface{}) bool {
 
 func (l *linkedQuene) Len() int {
 	return l.len
+}
+
+func (l *linkedQuene) IsEmpty() bool {
+	return l.len == 0
 }
 
 func (l *linkedQuene) String() string {

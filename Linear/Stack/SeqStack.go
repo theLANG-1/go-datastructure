@@ -41,6 +41,10 @@ func (s *SeqStack) Cap() int {
 	return cap(s.element)
 }
 
+func (s *SeqStack) IsEmpty() bool {
+	return len(s.element) == 0
+}
+
 func NewSeqStackWithCapAndValue(capacity int, value ...interface{}) *SeqStack {
 	return &SeqStack{
 		element: append(make([]interface{}, 0, len(value)), value...),
