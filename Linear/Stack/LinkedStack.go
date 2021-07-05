@@ -30,8 +30,9 @@ func (l *linkedStack) Top(obj *interface{}) bool {
 	if l.len == 0 {
 		return false
 	}
-
-	*obj = l.virtualHead.Next.Value
+	if obj != nil {
+		*obj = l.virtualHead.Next.Value
+	}
 	return true
 }
 
