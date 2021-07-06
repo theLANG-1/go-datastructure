@@ -24,6 +24,9 @@ func (l *linkedQuene) Dequene(obj *interface{}) bool {
 	}
 	l.virtualHead.Next = l.virtualHead.Next.Next
 	l.len--
+	if l.len == 0 {
+		l.last = l.virtualHead
+	}
 	return true
 }
 
