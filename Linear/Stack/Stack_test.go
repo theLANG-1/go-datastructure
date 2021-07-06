@@ -76,6 +76,7 @@ func markStackPush(b *testing.B, s stack) {
 	var (
 		element = 1
 	)
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		s.Push(element)
 	}

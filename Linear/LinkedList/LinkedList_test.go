@@ -42,6 +42,7 @@ func BenchmarkAddFirst(b *testing.B) {
 		element = 1
 		list    = NewLinkedList()
 	)
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		list.AddFirst(element)
 	}
@@ -84,6 +85,7 @@ func BenchmarkAddLast(b *testing.B) {
 		element = 1
 		list    = NewLinkedList()
 	)
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		list.AddLast(element)
 	}
