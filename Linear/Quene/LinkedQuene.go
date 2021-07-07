@@ -2,8 +2,9 @@ package Quene
 
 import (
 	"fmt"
-	"go-datastructure/Linear/LinkedList"
 	"strings"
+
+	"github.com/lgbgbl/go-datastructure/Linear/LinkedList"
 )
 
 type linkedQuene struct {

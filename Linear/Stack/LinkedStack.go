@@ -2,8 +2,9 @@ package Stack
 
 import (
 	"fmt"
-	"go-datastructure/Linear/LinkedList"
 	"strings"
+
+	"github.com/lgbgbl/go-datastructure/Linear/LinkedList"
 )
 
 type linkedStack struct {
